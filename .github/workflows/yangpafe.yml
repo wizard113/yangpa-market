@@ -6,14 +6,14 @@ on:
       - main
     paths:
       - 'yangpa-fe/**'
-      - '/.github/workflows/azure-static-web-apps-wonderful-sand-01a7afa1e.yml'
+      - '.github/workflows/yangpafe.yml'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
     paths:
       - 'yangpa-fe/**'
-      - '/.github/workflows/azure-static-web-apps-wonderful-sand-01a7afa1e.yml'
+      - '.github/workflows/yangpafe.yml'
 
 jobs:
   build_and_deploy_job:
