@@ -24,6 +24,8 @@ jobs:
           node-version: '22.x'
 
       - name: npm install, build, and test
+        # working directory 설정
+        working-directory: yangpa-be
         run: |
           npm install
           npm run build --if-present
@@ -33,7 +35,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          # path 수정
+          path: yangpa-be
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,7 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-      
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -62,4 +65,3 @@ jobs:
           app-name: 'yangpa-be113'
           slot-name: 'Production'
           package: .
-          
