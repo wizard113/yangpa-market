@@ -21,7 +21,7 @@ app.use('/members', errorHandler);
 // app.use('/images', imageRouter);
 app.use((_, res) => {
   res.status(404).json({
-    message: '존재하지 않은 API입니다. path와 method를 확인하십시오.',
+    message: '존재하지 않은 API입니다. path와 method를 확인하십시오.v1',
   });
 });
 app.listen(port, () => {
