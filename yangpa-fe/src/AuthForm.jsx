@@ -49,7 +49,7 @@ export default function AuthForm() {
 
   return (
     <div className="auth-container">
-      <h2>{mode === 'sign-up' ? '회원가입' : '로그인'}</h2>
+      <h2>{mode === 'sign-up' ? '회원가입 b1' : '로그인 v1'}</h2>
       <form onSubmit={handleSubmit} className="auth-form">
         <div className="form-group">
           <input
