@@ -1,13 +1,19 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps CI/CD-Yangpa FE
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'yangpa-fe/**'
+      - '/.github/workflows/azure-static-web-apps-wonderful-sand-01a7afa1e.yml'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    paths:
+      - 'yangpa-fe/**'
+      - '/.github/workflows/azure-static-web-apps-wonderful-sand-01a7afa1e.yml'
 
 jobs:
   build_and_deploy_job:
